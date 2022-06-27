@@ -83,11 +83,18 @@ function destroyBoxes() {
 }
 
 createBtn.addEventListener('click', handler => {
+    divBoxes.innerHTML = '';
     createBoxes(Number(inputEl.value));
+    inputEl.style.marginBottom = '20px';
+    divBoxes.style.display = 'flex';
+    divBoxes.style.flexWrap = 'wrap';
 }); // по клику на кнопку Создать
 
 inputEl.addEventListener('keypress', handler => {
     if (handler.key === 'Enter') createBoxes(Number(inputEl.value));
+    inputEl.style.marginBottom = '20px';
+    divBoxes.style.display = 'flex';
+    divBoxes.style.flexWrap = 'wrap';
 }); // по Enter
 
 clearBtn.addEventListener('click', handler => {
@@ -95,4 +102,3 @@ clearBtn.addEventListener('click', handler => {
 });
 
 // сделать массив цветов экспортом
-// мб пофиксить повторное добавление div, надо чтоб дивы обновлялись
