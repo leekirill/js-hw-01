@@ -3,8 +3,8 @@ const refs = {
     textEl: document.querySelector('span#text'),
 };
 
-refs.rangeEl.addEventListener('input', fontSizeChanger);
-
-function fontSizeChanger() {
+const fontSizeChanger = function () {
     refs.textEl.setAttribute('style', `font-size: ${refs.rangeEl.value}px`);
-}
+};
+
+refs.rangeEl.addEventListener('input', fontSizeChanger);
