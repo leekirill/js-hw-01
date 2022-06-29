@@ -15,10 +15,10 @@ const value = document.querySelector('span#value');
 
 incrementBtn.addEventListener(
     'click',
-    handler => (value.textContent = counterValue.increment()),
+    () => (value.textContent = counterValue.increment()),
 );
 
 decrementBtn.addEventListener(
     'click',
-    handler => (value.textContent = counterValue.decrement()),
+    () => (value.textContent = counterValue.decrement()),
 );
