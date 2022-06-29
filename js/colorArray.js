@@ -49,4 +49,5 @@ export default [
     '#FF4D4D',
     '#99E6E6',
     '#6666FF',
+    '#f00',
 ];
